@@ -1,47 +1,36 @@
-🔐 MERN Authentication System
+# 🔐 MERN Authentication System
 
-A full-stack MERN Authentication system with secure user registration, login, email verification (OTP), protected routes, and session handling.
+A full-stack **MERN Authentication System** with secure user registration, login, email verification (OTP), protected routes, and session handling.
 
-This project is built using MongoDB, Express.js, React.js, and Node.js, following clean project structure and best practices.
+This project is built using **MongoDB, Express.js, React.js, and Node.js**, following clean project structure and best practices.
 
-🚀 Features
-🔹 Backend
+---
 
-User Registration & Login
+## 🚀 Features
 
-Email Verification using OTP
+### Backend
+- User Registration & Login
+- Email Verification using OTP
+- JWT-based Authentication
+- Protected Routes (Middleware)
+- Password Hashing using bcrypt
+- Session Management
+- Input Validation
+- MongoDB Database Integration
+- Modular & Scalable Structure
 
-JWT-based Authentication
+### Frontend
+- Modern React UI (Vite)
+- Authentication Pages (Signup, Login, Verify OTP, Forgot Password)
+- Protected Routes
+- Context API for User State Management
+- Toast Notifications
+- Responsive Design
+- Reusable UI Components
 
-Protected Routes (Middleware)
-
-Password Hashing (bcrypt)
-
-Session Management
-
-Input Validation
-
-MongoDB Database Integration
-
-Modular & Scalable Structure
-
-🔹 Frontend
-
-Modern React UI (Vite)
-
-Authentication Pages (Signup, Login, Verify OTP, Forgot Password)
-
-Protected Routes
-
-Context API for User State
-
-Toast Notifications
-
-Responsive Design
-
-Clean UI Components
-
-📂 Project Structure
+---
+## 📂 Project Structure
+<pre>
 MERN_AUTH/
 ├── Backend/
 │   ├── controller/
@@ -52,7 +41,7 @@ MERN_AUTH/
 │   ├── routes/
 │   ├── validators/
 │   ├── server.js
-│   ├── package.json
+│   └── package.json
 │
 ├── Frontend/
 │   ├── public/
@@ -64,106 +53,66 @@ MERN_AUTH/
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   ├── index.html
-│   ├── package.json
+│   └── package.json
 │
 ├── .gitignore
-├── README.md
-
-🛠️ Tech Stack
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB
-
-Mongoose
-
-JWT
-
-bcrypt
-
-Nodemailer
-
-Frontend
-
-React.js
-
-Vite
-
-Tailwind CSS
-
-React Router
-
-Context API
-
-Toast Notifications
-
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-git clone <your-repo-url>
-cd MERN_AUTH
-
-2️⃣ Backend Setup
-cd Backend
-npm install
+└── README.md
+  </pre>
 
 
-Create a .env file in Backend:
+## 🛠️ Tech Stack
 
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_password
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcrypt
+- Nodemailer
 
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- React Router
+- Context API
+- Toast Notifications
 
-Run backend:
+---
 
-npm start
+## 🔐 Authentication Flow
 
-3️⃣ Frontend Setup
-cd ../Frontend
-npm install
-npm run dev
+1. User signs up  
+2. OTP is sent to registered email  
+3. User verifies email using OTP  
+4. User logs in with credentials  
+5. JWT is generated and stored securely  
+6. Protected routes are accessible only to authenticated users
 
-🔐 Authentication Flow
+---
 
-User signs up
+## 🧪 Future Enhancements
+- Google OAuth Authentication  
+- Refresh Token Implementation  
+- Role-Based Access Control  
+- Admin Dashboard  
+- Rate Limiting  
+- Unit and Integration Testing
 
-OTP sent to email
+---
 
-User verifies email
+## 📌 Important Notes
+- `node_modules` and `.env` files are ignored using `.gitignore`  
+- Ensure MongoDB is running before starting the backend  
+- Never expose sensitive environment variables
 
-Login with credentials
+---
 
-JWT stored securely
+## 👨‍💻 Author
+ <h2>Eslavath Chakravarthi</h2>  
 
-Protected routes accessible only to authenticated users
+---
 
-🧪 Future Enhancements
-
-Google OAuth Login
-
-Refresh Token Implementation
-
-Role-Based Access Control
-
-Admin Dashboard
-
-Rate Limiting
-
-Unit & Integration Tests
-
-📌 Important Notes
-
-node_modules and .env are ignored using .gitignore
-
-Make sure MongoDB is running
-
-Do not expose environment variables
-
-👨‍💻 Author
-
-Eslavath Chakravarthi
+## ⭐ Support
+If you find this project useful, consider giving it a ⭐ on GitHub!
