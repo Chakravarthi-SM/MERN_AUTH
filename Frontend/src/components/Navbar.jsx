@@ -48,7 +48,14 @@ const Navbar = () => {
         navigate("/"); // ✅ IMPORTANT
       }
     } catch (error) {
-      console.log(error);
+      toast.error(error.response.data.message, {
+                position: "top-center", // top of the screen
+                autoClose: 3000, // 2 seconds
+                hideProgressBar: true, // hide progress bar
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+              });
     }
   };
 

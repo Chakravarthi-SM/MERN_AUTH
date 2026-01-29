@@ -31,7 +31,7 @@ const Verify = () => {
           setStatus("❌ Invalid or Expired Token");
         }
       } catch (error) {
-        console.log(error);
+        
         setStatus("❌ Verification Failed.Please try again");
       }
     };

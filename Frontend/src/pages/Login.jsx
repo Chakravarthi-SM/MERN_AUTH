@@ -20,6 +20,7 @@ import { assets } from "@/assets/assets";
 import { Lock, Mail } from "lucide-react";
 import {toast } from "sonner"
 
+
 const Login = () => {
   const { setUser } = getData() || {};
   const navigate = useNavigate();
@@ -39,6 +40,8 @@ const Login = () => {
       [name]: value,
     }));
   };
+ 
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -68,6 +71,7 @@ const Login = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
+        
         });
 
         navigate("/home");
@@ -75,10 +79,25 @@ const Login = () => {
     } catch (error) {
       if (error.response) {
         setErrorMsg(error.response.data.message);
-        toast.error(error.response.data.message);
+       
+        toast.error(error.response.data.message, {
+          position: "top-center", // top of the screen
+          autoClose: 3000, // 2 seconds
+          hideProgressBar: true, // hide progress bar
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
       } else {
         setErrorMsg("Server error. Try again later.");
-        toast.error("Server error");
+        toast.error("Server error", {
+          position: "top-center", // top of the screen
+          autoClose: 3000, // 2 seconds
+          hideProgressBar: true, // hide progress bar
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
       }
     } finally {
       setIsLoading(false);
